@@ -24,14 +24,25 @@ header {
   padding-right: 15px;
 }
 
+.title-hidden {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px 0 0 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+}
+
 /*Шапка.Навигация сайта*/
-.container.nav {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.section-nav {
+.nav-section {
   display: flex;
   align-items: center;
 }
@@ -57,11 +68,11 @@ header {
   display: flex;
 }
 
-.nav-list .item:not(:last-child) {
+.nav-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.nav-list .link {
+.nav-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -75,11 +86,11 @@ header {
   text-decoration: none;
 }
 
-.nav-list .link.current {
+.nav-link.current {
   color: var(--accent-color);
 }
-.nav-list .link:hover,
-.nav-list .link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-color);
 }
 
@@ -87,11 +98,11 @@ header {
   display: flex;
 }
 
-.contacts .item:not(:last-child) {
+.contacts-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.contacts .link {
+.contacts-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -105,8 +116,8 @@ header {
   text-decoration: none;
 }
 
-.contacts .link:hover,
-.contacts .link:focus {
+.contacts-link:hover,
+.contacts-link:focus {
   color: var(--accent-color);
 }
 
@@ -134,7 +145,7 @@ header {
   text-transform: uppercase;
 }
 
-.button {
+.hero-button {
   display: inline-block;
   min-width: 200px;
   border-radius: 4px;
@@ -168,31 +179,24 @@ header {
 }
 
 /* Преимущества */
-.container.features {
+.features .container {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.title-hidden {
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px 0 0 0;
-
-  overflow: hidden;
-
-  opacity: 0;
 }
 
 .features-list {
   display: flex;
 }
 
-.features-list .item:not(:last-child) {
+.features-item {
+  min-width: 270px;
+}
+
+.features-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.features-list .title {
+.features-title {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -205,10 +209,7 @@ header {
   text-transform: uppercase;
 }
 
-.features-list p {
-  margin-top: 0;
-  margin-bottom: 0;
-
+.features-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
@@ -216,7 +217,7 @@ header {
 }
 
 /* Чем занимаются */
-.container.functions {
+.functions .container {
   padding-bottom: 94px;
 }
 
@@ -224,16 +225,16 @@ header {
   display: flex;
 }
 
-.functions-list .item:not(:last-child) {
+.functions-item:not(:last-child) {
   margin-right: 30px;
 }
 
 /* Команда */
-.section-team {
+.team {
   background-color: #f5f4fa;
 }
 
-.container.team {
+.team .container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -242,22 +243,22 @@ header {
   display: flex;
 }
 
-.team-list .item {
+.team-item {
   text-align: center;
 }
 
-.team-list .item:not(:last-child) {
+.team-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.team-list .name {
+.team-name {
   margin-top: 30px;
   margin-bottom: 10px;
 
   color: var(--title-text-color);
 }
 
-.team-list .position {
+.team-position {
   margin-bottom: 0px;
   padding-bottom: 30px;
   margin-top: 0;
@@ -295,13 +296,14 @@ header {
   color: var(--primary-white-color);
 }
 
-.address a {
+.mail,
+.phone {
   color: rgba(255, 255, 255, 0.6);
 
   text-decoration: none;
 }
 
-.address .mail {
+.mail {
   display: inline-block;
   margin-bottom: 9px;
 }
@@ -316,12 +318,12 @@ header {
   margin-bottom: 50px;
 }
 
-.list-filters {
+.filters-list {
   display: flex;
   justify-content: center;
 }
 
-.list-filters .item:not(:last-child) {
+.filter-item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -349,7 +351,7 @@ header {
   background-color: var(--accent-color);
 }
 
-.list-works {
+.works-list {
   display: flex;
   flex-wrap: wrap;
   margin-right: -30px;
@@ -357,7 +359,7 @@ header {
   padding: 0;
 }
 
-.list-works .item {
+.work-item {
   margin-right: 30px;
   margin-bottom: 30px;
   flex-basis: calc((100% - 90px) / 3);
@@ -365,17 +367,17 @@ header {
   background: #ffffff;
 }
 
-.list-works .item:nth-child(3n) {
+.work-item:nth-child(3n) {
   margin-right: 0;
 }
 
-.border {
+.work-border {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
 
-.list-works .project {
+.work-project {
   margin-bottom: 4px;
   padding-top: 20px;
   padding-left: 24px;
@@ -389,7 +391,7 @@ header {
   letter-spacing: 0.06em;
 }
 
-.list-works .type {
+.work-type {
   margin-top: 0;
   margin-bottom: 20px;
   padding-left: 24px;
