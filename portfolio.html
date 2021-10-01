@@ -21,8 +21,8 @@
 
   <body>
     <!--Шапка.Навигация сайта-->
-    <header>
-      <div class="container nav">
+    <header class="nav">
+      <div class="container nav-container">
         <nav class="nav-section">
           <a class="logo" href="./index.html">
             <span class="logo-text">Web</span>Studio
@@ -54,28 +54,26 @@
 
     <!-- Main -->
     <main>
-      <section class="portfolio">
+      <section class="section">
         <div class="container">
           <h1 class="title-hidden">Наши проекты</h1>
-          <div class="filters">
-            <ul class="filters-list">
-              <li class="filter-item">
-                <button type="button" class="filter-button">Все</button>
-              </li>
-              <li class="filter-item">
-                <button type="button" class="filter-button">Веб-сайты</button>
-              </li>
-              <li class="filter-item">
-                <button type="button" class="filter-button">Приложения</button>
-              </li>
-              <li class="filter-item">
-                <button type="button" class="filter-button">Дизайн</button>
-              </li>
-              <li class="filter-item">
-                <button type="button" class="filter-button">Маркетинг</button>
-              </li>
-            </ul>
-          </div>
+          <ul class="filters-list">
+            <li class="filter-item">
+              <button type="button" class="filter-button">Все</button>
+            </li>
+            <li class="filter-item">
+              <button type="button" class="filter-button">Веб-сайты</button>
+            </li>
+            <li class="filter-item">
+              <button type="button" class="filter-button">Приложения</button>
+            </li>
+            <li class="filter-item">
+              <button type="button" class="filter-button">Дизайн</button>
+            </li>
+            <li class="filter-item">
+              <button type="button" class="filter-button">Маркетинг</button>
+            </li>
+          </ul>
 
           <ul class="works-list">
             <li class="work-item">
@@ -222,7 +220,6 @@
           <a href="mailto:info@devstudio.com" class="mail"
             >info@devstudio.com</a
           >
-          <br />
           <a href="tel:+380961111111" class="phone">+38 096 111 11 11</a>
         </address>
       </div>
